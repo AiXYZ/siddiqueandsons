@@ -1,8 +1,3 @@
-/*
- * Copyright (c) 2012 ThemeMarket
- * Author: Azamat Umarov 
- * This file is made for Laboratory
-*/
 
 // -----------------------------------------------------  LOADING
 window.onload=function() {
@@ -118,9 +113,9 @@ $(function($){
 		slide_links				:	'blank',	// Individual links for each slide (Options: false, 'num', 'name', 'blank')
 		slides 					:  	[			// Slideshow Images
 											{image : 'img/slider/1.jpg'},
-											{image : 'img/slider/6.jpg'},
-											{image : 'img/slider/7.jpg'},
-											{image : 'img/slider/8.jpg'}
+											{image : 'img/slider/2.jpg'},
+											{image : 'img/slider/3.jpg'},
+											{image : 'img/slider/4.jpg'}
 									]
 		
 	});
