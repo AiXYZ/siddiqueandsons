@@ -1,9 +1,10 @@
 
 // -----------------------------------------------------  LOADING
+/*
 window.onload=function() {
     document.getElementById('loading-mask').style.display='none';
 }
-
+*/
 jQuery(document).ready(function(){
 
 // -----------------------------------------------------  NAV MOVEMENT
@@ -58,7 +59,7 @@ jQuery(document).ready(function(){
 
 		
 // -----------------------------------------------------  SERVICE SPIN
-	
+	/*
 	var cssPrefix = false, tezlik;
 	
 	if (jQuery.browser.mozilla) { cssPrefix = "moz"; tezlik = 1;    }
@@ -94,7 +95,7 @@ jQuery(document).ready(function(){
 		  },tezlik);
 		}
 	});
-	
+	*/
 	
 });
 
@@ -112,6 +113,7 @@ $(function($){
 		// Components							
 		slide_links				:	'blank',	// Individual links for each slide (Options: false, 'num', 'name', 'blank')
 		slides 					:  	[			// Slideshow Images
+											{image : 'img/slider/5.jpg'},
 											{image : 'img/slider/1.jpg'},
 											{image : 'img/slider/2.jpg'},
 											{image : 'img/slider/3.jpg'},
