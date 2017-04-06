@@ -136,10 +136,10 @@ function submitForm(){
 
 // -----------------------------------------------------  GOOGLE MAP		
 jQuery(document).ready(function(){ 
-	var myLatlng = new google.maps.LatLng(-34.397, 150.644);
+	var myLatlng = new google.maps.LatLng(31.58061981201172,74.38059997558594);
 	var myOptions = {
 	  center: myLatlng,
-	  zoom: 8,
+	  zoom: 15,
 	  mapTypeId: google.maps.MapTypeId.ROADMAP,
 	  scrollwheel: false
 	};
