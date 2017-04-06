@@ -799,3 +799,8 @@ a.foot-twitter:hover { background:url(../img/social/twitter.png) no-repeat cente
 a.foot-skype:hover { background:url(../img/social/skype.png) no-repeat center; }
 a.foot-linkedin:hover { background:url(../img/social/linkedin.png) no-repeat center; }
 a.foot-vimeo:hover { background:url(../img/social/vimeo.png) no-repeat center; }
+
+.disableSendButton{
+    pointer-events: none;
+    background: #fbbd9d !important;
+}

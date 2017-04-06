@@ -340,13 +340,14 @@
 				
 				<div class="column-one-half form">
 					<form action="#" method="post" id="contactForm" name="contactForm">
-						<div class="input-section"><input type="text" class="com-text" name="yourname" id="yourname" /><label>Name</label></div>
+						<div class="input-section"><input type="text" class="com-text" name="name" id="name" /><label>Name*</label></div>
+						<div class="input-section"><input type="text" class="com-text" name="phone" id="phone" /><label>Phone*</label></div>
 						<div class="input-section"><input type="text" class="com-text" name="email" id="email" /><label>Email</label></div>
-						<div class="input-section"><input type="text" class="com-text" name="tele" id="tele" /><label>Subject</label></div>
-						<div class="input-section"><textarea class="textbox" name="message" rows="10" cols="20"></textarea><label>Message</label></div>
-						<div class="input-section"><a href="javascript:submitForm();" class="send">Send</a></div>
+						<div class="input-section"><textarea class="textbox" name="message" id="message" rows="10" cols="20"></textarea><label>Message*</label></div>
+						<div class="input-section"><a id="contactFormButton" href="javascript:submitForm();" class="send">Send</a></div>
+						
 					</form>
-					<div class="alertMessage"></div>
+					<div id="successMessage"></div>
 				</div>
 			</div>
 		</section>

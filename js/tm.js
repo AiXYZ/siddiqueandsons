@@ -125,13 +125,59 @@ $(function($){
 
 // ----------------------------------------------------  CONTACT FORM
 function submitForm(){
-	$.post('plugin/sendmail.html',$('#contactForm').serialize(), function(msg) {
-		$(".alertMessage").html(msg);
-	});
-	// Hide previous response text
-	$(msg).remove();
-	// Show response message
-	contactform.prepend(msg);
+	
+    if(document.forms["contactForm"]["name"].value == ""){
+        alert("Name must be filled out");
+        document.forms["contactForm"]["name"].focus();
+        return false;
+    }else if(document.forms["contactForm"]["phone"].value == ""){
+        alert("Phone must be filled out");
+        document.forms["contactForm"]["phone"].focus();
+        return false;    	
+    }else if(document.forms["contactForm"]["message"].value == ""){
+        alert("Message must be filled out");
+        document.forms["contactForm"]["message"].focus();
+        return false;    	
+    }else{
+    	//contact form send email start
+    	var formData = {
+    		'name':$('#name').val(),
+    		'phone':$('#phone').val(),
+    		'email':$('#email').val(),
+    		'message':$('#message').val(),
+    	};
+    	
+    	//console.log(formData);
+    	
+		$.ajax({
+			type: 'POST',
+			url: 'contact/contact.php',
+			data: formData,
+			beforeSend: function(){
+				$("#contactFormButton").addClass("disableSendButton");
+			},
+			complete: function(){
+				$("#contactFormButton").removeClass("disableSendButton");
+			},
+			dataType: 'json',
+			encode: true
+		}) // end ajax
+			
+		.done(function(data){
+			//console.log(data.message);
+			var successMessage = data.message;
+    		$('#successMessage').empty();
+    		$('#successMessage').append(successMessage);
+    		
+    		$('#name').val('');
+    		$('#phone').val('');
+    		$('#email').val('');
+    		$('#message').val('');    		
+	 
+		});    	
+    	//contact form send email end
+    	
+    }
 }	
 
 // -----------------------------------------------------  GOOGLE MAP		
