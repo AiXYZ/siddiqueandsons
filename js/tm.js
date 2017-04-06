@@ -147,13 +147,13 @@ jQuery(document).ready(function(){
 	var marker = new google.maps.Marker({
 	  position: myLatlng,
 	  map: map,
-	  title:"Click Me for more info!"
+	  title:"SIDDIQUE AND SONS"
 	});
 	
 	var infowindow = new google.maps.InfoWindow({});
 	
 	google.maps.event.addListener(marker, 'click', function() {
-		infowindow.setContent("Write here some description"); //sets the content of your global infowindow to string "Tests: "
+		infowindow.setContent("SIDDIQUE AND SONS"); //sets the content of your global infowindow to string "Tests: "
 		infowindow.open(map,marker); //then opens the infowindow at the marker
 	});
 	marker.setMap(map);
